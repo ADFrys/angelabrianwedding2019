@@ -1,2 +1,2 @@
-Django Application
+Django Application - 
 Wedding Website
