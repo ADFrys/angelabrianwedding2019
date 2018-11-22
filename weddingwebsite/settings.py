@@ -25,6 +25,26 @@ if os.environ['SECRETKEY']:
 else:
     print('You need to set the SECRETKEY environment variable')
 
+if os.environ['DBPASSWORD']:
+    DB_PASS = os.environ['DBPASSWORD']
+else:
+    print('You need to set the DBPASS environment variable')
+
+if os.environ['DBUSER']:
+    DB_USER = os.environ['DBUSER']
+else:
+    print('You need to set the DBUSER environment variable')
+
+if os.environ['DBPORT']:
+    DB_PORT = os.environ['DBPORT']
+else:
+    print('You need to set the DBPORT environment variable')
+
+if os.environ['DBHOST']:
+    DB_HOST = os.environ['DBHOST']
+else:
+    print('You need to set the DBHOST environment variable')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -79,8 +99,12 @@ WSGI_APPLICATION = 'weddingwebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'eventdb',
+        'USER': DB_USER,
+        'PASSWORD': DB_PASS,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
 
