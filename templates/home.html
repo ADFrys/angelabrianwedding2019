@@ -1,16 +1,13 @@
 <html>
 <head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-	<h1>Under Construction! Angela and Brian's Wedding Website Coming Soon!!</h1>
-	<h2>Save The Date: Saturday, May 25, 2019 (Memorial Day Weekend)</h2>
+	<div class="constructionPage">
+		<h1>Under Construction! <br>Angela and Brian's Wedding Website Coming Soon!!</h1>
+		<h2>Save The Date: Saturday, May 25, 2019 (Memorial Day Weekend)</h2>
+		<img width=90% height=90% src="{% static "images/rose.jpg" %}" alt="My image">
+	</div>
 </body>
 </html>
-
-<style type="text/css">
-h1, h2 {
-	font-family: cursive;
-	text-align: center;
-	color: #3333cc;
-}
-</style>
