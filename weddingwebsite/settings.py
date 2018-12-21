@@ -47,7 +47,7 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['34.227.15.253']
+ALLOWED_HOSTS = ['']
 
 
 # Application definition
