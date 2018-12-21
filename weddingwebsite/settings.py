@@ -149,7 +149,7 @@ STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
 
 STATIC_ROOT= os.path.join(BASE_DIR, 'eventdetails/static')
 
-STATIC_URL = '/static/'
+STATIC_URL = '/opt/wedding/eventdetails/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
