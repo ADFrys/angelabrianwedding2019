@@ -47,8 +47,13 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['']
+if os.environ['DJANGO_DEBUG']:
+    DEBUG = os.environ['DJANGO_DEBUG']
 
+ALLOWED_HOSTS = []
+
+if os.environ['ALLOWED_HOSTS']:
+    ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS']
 
 # Application definition
 
@@ -146,9 +151,12 @@ USE_TZ = True
 
 STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
 
-STATIC_ROOT= os.path.join(BASE_DIR, 'eventdetails/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'eventdetails/static')
 
-STATIC_URL = '/opt/wedding/eventdetails/static/'
+if os.environ['STATIC_ROOT']:
+    STATIC_ROOT = os.environ['STATIC_ROOT']
+
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
