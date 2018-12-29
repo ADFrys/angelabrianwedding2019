@@ -45,12 +45,13 @@ else:
     print('You need to set the DBHOST environment variable')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DJANGO_DEBUG', False)
 
-if os.environ['DJANGO_DEBUG']:
-    DEBUG = os.environ['DJANGO_DEBUG']
-
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', [])
+if os.getenv('ALLOWED_HOSTS'):
+    ALLOWED_HOSTS_LIST = os.getenv('ALLOWED_HOSTS').split(',')
+    ALLOWED_HOSTS = [host.strip() for host in ALLOWED_HOSTS_LIST]
+else:
+    ALLOWED_HOSTS = []
 
 # Application definition
 
