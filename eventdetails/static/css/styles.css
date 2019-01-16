@@ -2,7 +2,7 @@
 * {
 	align-content: center;
 	color: #3333cc;
-	font-family: cursive;
+	font-family: arial; 
 	text-align: center;
 }
 
@@ -22,7 +22,6 @@ body {
   height: 100%;
 }
 body {
-  color: #3333cc;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   background-color: #F5F5F5;
@@ -30,16 +29,15 @@ body {
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
-  display: table;
+  display: block;
   height: 700px;
   width: 100%;
   background-image: url('../images/bloom.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  /*height: 100%; */
-  /*min-height: 100%;*/
 }
 .site-wrapper-inner {
+  display: table;
   display: table-cell;
   vertical-align: top;
 }
@@ -65,7 +63,7 @@ body {
 	background-color: white;
   width: 100%;
   border: 5px solid silver;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .masthead-nav > li {
@@ -108,6 +106,14 @@ li {
   list-style-type: none;
 }
 
+.container {
+  padding-left: 0px;
+}
+
+ul.nav {
+  flex-wrap: nowrap;
+}
+
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
@@ -145,8 +151,21 @@ li {
   padding: 20px;
   width: 500px;
   height: 140px;
-  margin-left: 25%;
   border: 5px solid silver;
+  margin-top: 15rem;
+  margin-left: 55%;
+}
+
+#registryLink {
+  font-size: 1.5em;
+}
+
+h2, h4, p {
+  color: black !important;
+}
+
+.underlinedList {
+  text-decoration: underline;
 }
 
 /*
@@ -163,9 +182,13 @@ li {
   .site-wrapper-inner {
     vertical-align: middle;
   }
+
+  .inner {
+    margin-left: 50%;
+  }
 }
 
-@media (max-width: 750px) {
+@media (min-width: 300px) and (max-width: 768px) {
   .inner {
     max-width: 300px;
     height: auto;
@@ -179,5 +202,16 @@ li {
 
   .site-wrapper {
     height: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .inner {
+  margin-left: 80%;
+  }
+
+.masthead-nav > li + li {
+  margin-left: 70px;
   }
 }
