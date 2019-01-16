@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 from django.conf.urls.static import static
+import eventdetails.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mainpage),
     path('mainpage/', views.mainpage),
-    path('comingsoon/', views.home)
+    path('comingsoon/', views.home),
+    path('guest/', eventdetails.views.event)
 ]

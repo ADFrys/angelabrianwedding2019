@@ -1,0 +1,7 @@
+<h1>Guestbook</h1>
+{% load static %}
+<img width=90% height=90% src="{% static "images/rose.jpg" %}" alt="My image">
+
+{% for event in events.all %}
+<p>{{ event.summary }}</p>
+{% endfor %}
