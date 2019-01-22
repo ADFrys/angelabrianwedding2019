@@ -36,6 +36,11 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+#guest {
+  background-image: url('../images/bridegroom.jpg');
+}
+
 .site-wrapper-inner {
   display: table;
   display: table-cell;
@@ -99,6 +104,11 @@ body {
 
 #couplepic {
   width: 70%;
+  height: auto;
+}
+
+#rose {
+  width: 50%;
   height: auto;
 }
 
@@ -203,6 +213,7 @@ h2, h4, p {
   .site-wrapper {
     height: 250px;
   }
+
 }
 
 @media (min-width: 1200px) {
