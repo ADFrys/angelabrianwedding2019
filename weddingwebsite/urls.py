@@ -23,6 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mainpage),
     path('mainpage/', views.mainpage),
-    path('comingsoon/', views.home),
     path('guest/', eventdetails.views.event)
 ]
