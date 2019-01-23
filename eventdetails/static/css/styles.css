@@ -112,6 +112,13 @@ body {
   height: auto;
 }
 
+.book {
+  background-image: url('../images/letter.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
 li {
   list-style-type: none;
 }

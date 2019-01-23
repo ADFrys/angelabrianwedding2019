@@ -41,11 +41,27 @@
 		</div>
 	</div>
 </div>
-<div>
-<br>
-	<ul class="list-group">
-		{% for event in events.all %}
-		<li class="list-group-item">{{ event.summary }}</li>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+</div>
+	</div>
+<div class="album book">
+	<br><br><br><br>
+  <div class="container">
+    <div class="row">
+    	{% for event in events.all %}
+    	<div class="col-md-6">
+    		<div class="card mb-6 box-shadow">
+    			<div class="card-body">
+    				<p class="card-text">{{ event.summary }}</p>
+    			</div>
+    		</div>
+    		<br>
+    	</div>	
 		{% endfor %}
-	</ul>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
