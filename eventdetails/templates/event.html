@@ -47,7 +47,17 @@
 		</div>
 	</div>
 </div>
-	</div>
+<br>
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<input type="text" name="summary"> </input>
+
+	<button type="submit">Submit</button>
+
+</form>
+{% endblock %}
+
 <div class="album book">
 	<br><br><br><br>
   <div class="container">
