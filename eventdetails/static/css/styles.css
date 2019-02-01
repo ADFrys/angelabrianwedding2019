@@ -185,6 +185,12 @@ h2, h4, p {
   text-decoration: underline;
 }
 
+#guestbookEntry {
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
 /*
  * Affix and center
  */

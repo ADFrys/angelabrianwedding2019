@@ -49,10 +49,13 @@
 </div>
 <br>
 {% block content %}
+<div>
+	<p><span style='font-size: 2em';>Write in the Guestbook!</span> (P.S. Don't forget your name)</p>
+
 <form method="POST">
 	{% csrf_token %}
-	<input type="text" name="summary"> </input>
-
+	<input id="guestbookEntry" type="text" name="summary"> </input>
+	<br><br>
 	<button type="submit">Submit</button>
 
 </form>
