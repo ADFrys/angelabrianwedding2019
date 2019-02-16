@@ -69,6 +69,7 @@ body {
   width: 100%;
   border: 5px solid silver;
   padding-left: 10px;
+  z-index: 10;
 }
 
 .masthead-nav > li {
@@ -237,5 +238,53 @@ h2, h4, p {
 
 .masthead-nav > li + li {
   margin-left: 70px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .inner {
+    margin-left: 100%
+  }
+}
+
+@media (min-width: 1600px) {
+  .inner {
+    margin-left: 110%
+  }
+}
+
+@media (min-width: 1800px) {
+  .inner {
+    margin-left: 130%
+  }
+}
+
+@media (min-width: 2000px) {
+  .inner {
+    margin-left: 150%
+  }
+}
+
+@media (min-width: 2200px) {
+  .inner {
+    margin-left: 170%
+  }
+}
+
+@media (min-width: 2400px) {
+  .inner {
+    margin-left: 190%
+  }
+}
+
+@media (min-width: 2500px) {
+  .inner {
+    margin-left: 200%
+  }
+}
+
+@media (min-width: 2700px) {
+  .inner {
+    margin-left: 220%
   }
 }
