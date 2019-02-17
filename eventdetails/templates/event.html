@@ -52,11 +52,13 @@
 <br>
 {% block content %}
 <div>
-	<p><span style='font-size: 2em';>Write in the Guestbook!</span> (P.S. Don't forget your name)</p>
+	<p><span style='font-size: 2em';>Write in the Guestbook!</span></p>
 
 <form method="POST">
 	{% csrf_token %}
-	<textarea id="guestbookEntry" type="text" name="summary"> </textarea>
+	<textarea id="guestbookEntry" type="text" name="summary" placeholder="Message" maxlength="200"></textarea>
+	<br><br>
+	<input id="guestbookEntry" type="text" name="name" placeholder="Enter Your Name" maxlength="50"> </input>
 	<br><br>
 	<button type="submit">Submit</button>
 
@@ -71,7 +73,7 @@
     	<div class="col-md-6">
     		<div class="card mb-6 box-shadow">
     			<div class="card-body">
-    				<p class="card-text">{{ event.summary }}</p>
+    				<p class="card-text">{{ event.summary }} <br> {{ event.name }}</p>
     			</div>
     		</div>
     		<br>

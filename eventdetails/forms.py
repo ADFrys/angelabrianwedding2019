@@ -4,4 +4,4 @@ from .models import Event
 class eventForm(forms.ModelForm):
 	class Meta:
 		model = Event
-		fields = ["summary"]
+		fields = ["summary", "name"]

@@ -192,6 +192,10 @@ h2, h4, p {
   box-sizing: border-box;
 }
 
+footer {
+  background-color: grey;
+}
+
 /*
  * Affix and center
  */
